@@ -3,26 +3,26 @@
 //
 #include <iostream>
 
-#define MONDAY 1
-#define THUESDAY 2
-#define WEDNESDAY 3
-#define THURSDAY 4
-#define FRIDAY 5
-#define SATURDAY 6
-#define SUNDAY 7
+#define MONDAY "MONDAY"
+#define THUESDAY "THUESDAY"
+#define WEDNESDAY "WEDNESDAY"
+#define THURSDAY "THURSDAY"
+#define FRIDAY "FRIDAY"
+#define SATURDAY "SATURDAY"
+#define SUNDAY "SUNDAY"
 
 int main() {
     std::cout << "Input the day of week by number and you can see the name of the day" << std::endl;
     std::cout << "Input num of day of week: ";
     int day;
     std::cin >> day;
-    if(MONDAY==day) std::cout<<"Monday";
-    else if(THUESDAY==day) std::cout<<"Thusday";
-    else if(WEDNESDAY==day) std::cout<<"Wednesday";
-    else if(THURSDAY==day) std::cout<<"Thursday";
-    else if(FRIDAY==day) std::cout<<"Friday";
-    else if(SATURDAY==day) std::cout<<"Saturday";
-    else if(SUNDAY==day) std::cout<<"Sunday";
+    if(1==day) std::cout<<MONDAY;
+    else if(2==day) std::cout<<THUESDAY;
+    else if(3==day) std::cout<<WEDNESDAY;
+    else if(4==day) std::cout<<THUESDAY;
+    else if(5==day) std::cout<<FRIDAY;
+    else if(6==day) std::cout<<SATURDAY;
+    else if(7==day) std::cout<<SUNDAY;
     else std::cout << "There is no such day";
     return 0;
 }
