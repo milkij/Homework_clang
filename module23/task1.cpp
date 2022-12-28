@@ -19,7 +19,7 @@ int main() {
     if(1==day) std::cout<<MONDAY;
     else if(2==day) std::cout<<THUESDAY;
     else if(3==day) std::cout<<WEDNESDAY;
-    else if(4==day) std::cout<<THUESDAY;
+    else if(4==day) std::cout<<THURSDAY;
     else if(5==day) std::cout<<FRIDAY;
     else if(6==day) std::cout<<SATURDAY;
     else if(7==day) std::cout<<SUNDAY;

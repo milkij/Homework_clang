@@ -8,7 +8,7 @@
 #define FUNC(a)
 #define SHOW_SEASON() FUNC(SPRING);
 
-#if 1
+#ifdef SPRING
 int main() {
     SHOW_SEASON();
     return 0;
