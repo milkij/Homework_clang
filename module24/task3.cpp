@@ -16,7 +16,7 @@ int main(){
     std::cout<<"Input min and sec in format MM:SS: ";
     std::cin >> std::get_time(local,"%M:%S");
     std::time_t start_time = mktime(local);
-    //std::cout<<start_time;
+
     while (true) {
         if(start_time==t) {
             std::cout<<"DING! DING! DING";
