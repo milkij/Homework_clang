@@ -10,24 +10,25 @@ void delay(int ms)
 
 int main(){
 #if 1
-    int min,sec;
-    printf("Input min and sec: ");
-    std::cin>>min>>sec;
-    std::time_t finish_time = std::time(nullptr)+(std::time_t)(min*60+sec)-1;
-    while(true){
-        std::time_t temp_time =std::time(nullptr);
-        std::cout<<min<<':'<<sec<<std::endl;
-        if(sec-1==-1) {
-            sec=60;
-            min--;
-        }
-        sec--;
-        delay(1000000);
-        if(temp_time==finish_time) {
+    std::time_t t = std::time(nullptr);
+    t=0;
+    std::tm* local = std::localtime(&t);
+    std::cout<<"Input min and sec in format MM:SS: ";
+    std::cin >> std::get_time(local,"%M:%S");
+    std::time_t start_time = mktime(local);
+    //std::cout<<start_time;
+    while (true) {
+        if(start_time==t) {
             std::cout<<"DING! DING! DING";
             break;
         }
+        std::tm localtime= *std::localtime(&start_time);
+        std::cout<<std::put_time(&localtime,"%M:%S")<<std::endl;
+        start_time--;
+        delay(1000000);
+        system("clear");
     }
 
 #endif
+
 }
