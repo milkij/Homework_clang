@@ -3,4 +3,4 @@ project(Homework_clang)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Homework_clang module24/task3.cpp)
+add_executable(Homework_clang module24/task2.cpp)

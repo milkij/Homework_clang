@@ -1,12 +1,7 @@
+#include <thread>
 #include "iostream"
 #include "iomanip"
 #include "ctime"
-
-void delay(int ms)
-{
-    int c = clock() + ms;
-    while (clock() < c);
-}
 
 int main(){
 #if 1
@@ -25,10 +20,8 @@ int main(){
         std::tm localtime= *std::localtime(&start_time);
         std::cout<<std::put_time(&localtime,"%M:%S")<<std::endl;
         start_time--;
-        delay(1000000);
+        std::this_thread::sleep_for(std::chrono::seconds(1));
         system("clear");
     }
-
 #endif
-
 }
